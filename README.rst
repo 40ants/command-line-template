@@ -81,8 +81,13 @@ To check which Lisp are supported, run:
 
    ros list versions
 
+Credits
+=======
+
+This script was inspired by `this reddit post`_ by zodmaner.
+
 .. _roswell: https://github.com/roswell/roswell
 .. _qlot: https://github.com/fukamachi/qlot
 .. _defmain: https://github.com/40ants/defmain
 .. _cl-info: https://github.com/40ants/cl-info
-
+.. _this reddit post: https://www.reddit.com/r/lisp/comments/8o2r8p/a_makefile_template_for_creating_an_executable/
