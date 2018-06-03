@@ -1,0 +1,31 @@
+#!/bin/sh
+#|-*- mode:lisp -*-|#
+#|
+exec ros -Q -- $0 "$@"
+|#
+(progn ;;init forms
+  (ros:ensure-asdf)
+  (ql:quickload '(defmain
+                  cl-info)
+                :silent t))
+
+(defpackage :ros.script.app
+  (:use #:cl
+        #:defmain))
+(in-package :ros.script.app)
+
+(defvar *version* "0.1.0")
+
+(defmain main ((verbose "More verbose output."
+                        :flag t)
+               (version "Show version number."
+                        :short "V"
+                        :flag t))
+  (when version
+    (format t "Version: ~A~%" *version*)
+    (when verbose
+      (format t "~A~%" (cl-info:make-cl-info)))
+    (uiop:quit))
+
+  (format t "This is a stub. It does nothing. Add your implementation here."))
+

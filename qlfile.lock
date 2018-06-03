@@ -1,0 +1,18 @@
+("quicklisp" .
+ (:class qlot.source.ql:source-ql-all
+  :initargs (:project-name "quicklisp" :%version :latest)
+  :version "2018-04-30"))
+("defmain" .
+ (:class qlot.source.github:source-github
+  :initargs (:project-name "defmain" :repos "40ants/defmain" :ref nil :branch nil :tag nil)
+  :version "github-d335d24faf96e131d05991a6f401bd9b44e1c512"
+  :repos "40ants/defmain"
+  :url "https://github.com/40ants/defmain/archive/d335d24faf96e131d05991a6f401bd9b44e1c512.tar.gz"
+  :ref "d335d24faf96e131d05991a6f401bd9b44e1c512"))
+("cl-info" .
+ (:class qlot.source.github:source-github
+  :initargs (:project-name "cl-info" :repos "40ants/cl-info" :ref nil :branch nil :tag nil)
+  :version "github-c2e0d055549e1649861163a4cdcb6dd67137f114"
+  :repos "40ants/cl-info"
+  :url "https://github.com/40ants/cl-info/archive/c2e0d055549e1649861163a4cdcb6dd67137f114.tar.gz"
+  :ref "c2e0d055549e1649861163a4cdcb6dd67137f114"))
